@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to tips’s documentation! &mdash; tips 2.7.13 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="tips 2.7.13 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> tips
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.7.13
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">tips</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Welcome to tips&#8217;s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-tips-s-documentation">
+<h1>Welcome to tips&#8217;s documentation!<a class="headerlink" href="#welcome-to-tips-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<blockquote>
+<div><ul class="simple">
+<li>This is the series for best practise</li>
+</ul>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#diagrams-example-ref"><span>I. Diagram example</span></a></li>
+<li><a class="reference internal" href="#table-example-ref"><span>II. Table example</span></a></li>
+<li><a class="reference internal" href="#code-block-example-ref"><span>III. Code block example</span></a></li>
+<li><a class="reference internal" href="#diagram-with-markdown-series-ref"><span>IV. Diagrams with Markdown series</span></a></li>
+<li><a class="reference internal" href="#references-ref"><span>V. References</span></a></li>
+</ul>
+<div class="section" id="i-diagram-example">
+<span id="diagrams-example-ref"></span><h2>I. Diagram example<a class="headerlink" href="#i-diagram-example" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/diagram-clinic-create.png" src="_images/diagram-clinic-create.png" />
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<a href="javascript:showhide(document.getElementById('hiddencodeblock1'))">--- View Clinic create diagram source ---</a><br /><div id="hiddencodeblock1" style="display: none"><div class="highlight-python"><div class="highlight"><pre><span></span>sequenceDiagram
+User-&gt;&gt; View: Gestures (Click on [Create new] link)
+View-&gt;&gt; ClinicsController: preview()①+
+ClinicsController-&gt;&gt; +ClinicCreate: Data Validation②+
+Note right of ClinicCreate: Model Validate
+loop Data Validation
+  ClinicCreate-&gt;&gt;ClinicCreate: __construct()
+end
+ClinicCreate--&gt;&gt; -ClinicsController: Response from Validation
+View-&gt;&gt; ClinicsController: create()③+
+ClinicsController-&gt;&gt; +ClinicComponent: clinicInsert()④+
+ClinicComponent--&gt;&gt; -ClinicsController: $clinicObject
+ClinicsController--&gt;&gt; View: $result
+View--&gt;&gt; User: New view to User
+</pre></div>
+</div>
+</div><hr class="docutils" />
+</div>
+<div class="section" id="ii-table-example">
+<span id="table-example-ref"></span><h2>II. Table example<a class="headerlink" href="#ii-table-example" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">No</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[No.11]</td>
+<td>[No] column</td>
+</tr>
+<tr class="row-odd"><td>[No.12]</td>
+<td>[Name] column</td>
+</tr>
+<tr class="row-even"><td>[No.13]</td>
+<td>[Owner] column</td>
+</tr>
+<tr class="row-odd"><td>[No.14]</td>
+<td>[Register Date] column</td>
+</tr>
+<tr class="row-even"><td>[No.15]</td>
+<td>[Phone] column</td>
+</tr>
+<tr class="row-odd"><td>[No.16]</td>
+<td>[Edit] link</td>
+</tr>
+<tr class="row-even"><td>[No.17]</td>
+<td>[Delete] link</td>
+</tr>
+<tr class="row-odd"><td>[No.18]</td>
+<td>The pagination for search result</td>
+</tr>
+<tr class="row-even"><td>[No.21]</td>
+<td>[Action] column</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="iii-code-block-example">
+<span id="code-block-example-ref"></span><h2>III. Code block example<a class="headerlink" href="#iii-code-block-example" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Finding all clinics exist in database with condition inputed at [Clinic] screen</p>
+<blockquote>
+<div><ul class="simple">
+<li>File: Clinics/ClinicsController.php</li>
+<li>Function: search()</li>
+</ul>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="o">...</span>
+<span class="sd">/**</span>
+<span class="sd"> * Function to get search result</span>
+<span class="sd"> * @access public</span>
+<span class="sd"> * @return array</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">search</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">is</span><span class="p">(</span><span class="s1">&#39;post&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;action&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span><span class="p">));</span>
+  <span class="p">}</span>
+  <span class="nv">$errorMsg</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+  <span class="nv">$result</span>   <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+  <span class="nv">$params</span>   <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">[</span><span class="s1">&#39;clinic&#39;</span><span class="p">];</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ClinicSearch</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nv">$params</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ClinicSearch</span><span class="o">-&gt;</span><span class="na">validates</span><span class="p">())</span> <span class="p">{</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Clinic</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="nv">$params</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_searchFields</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nv">$errorMsg</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ClinicSearch</span><span class="o">-&gt;</span><span class="na">validationErrors</span><span class="p">;</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">&#39;validateError&#39;</span><span class="p">,</span> <span class="nv">$errorMsg</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="iv-diagrams-with-markdown-series">
+<span id="diagram-with-markdown-series-ref"></span><h2>IV. Diagrams with Markdown series<a class="headerlink" href="#iv-diagrams-with-markdown-series" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><ol class="first arabic simple">
+<li>Draw Diagrams With Markdown</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>Sequence, Flowchart, GanttChart</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="http://support.typora.io/Draw-Diagrams-With-Markdown">http://support.typora.io/Draw-Diagrams-With-Markdown</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Typora download</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://typora.io">https://typora.io</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Creating diagrams in Sphinx</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="http://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.html">http://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.html</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="2">
+<li>Mermaid Library Detail</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Github: <a class="reference external" href="https://github.com/knsv/mermaid">https://github.com/knsv/mermaid</a></li>
+<li><dl class="first docutils">
+<dt>Mermaid docs</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="http://knsv.github.io/mermaid">http://knsv.github.io/mermaid</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>sample editor (do not use in project because security risk)</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="http://knsv.github.io/mermaid/live_editor/">http://knsv.github.io/mermaid/live_editor/</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Sphinx extension</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://github.com/mgaitan/sphinxcontrib-mermaid">https://github.com/mgaitan/sphinxcontrib-mermaid</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="3">
+<li>js-sequence-diagrams (Turns text into UML sequence diagrams)</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://bramp.github.io/js-sequence-diagrams/">https://bramp.github.io/js-sequence-diagrams/</a></dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://github.com/bramp/js-sequence-diagrams/blob/master/README.md">https://github.com/bramp/js-sequence-diagrams/blob/master/README.md</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="4">
+<li>Reference more skill with Markdown</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://support.typora.io/">http://support.typora.io/</a></li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="5">
+<li>Markdown Cheatsheet</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code</a></li>
+<li><a class="reference external" href="https://help.github.com/categories/writing-on-github/">https://help.github.com/categories/writing-on-github/</a></li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="6">
+<li>Live Markdown Editor (Do not use in project because security risk, just practice)</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://jbt.github.io/markdown-editor">https://jbt.github.io/markdown-editor</a></li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="7">
+<li>Read more</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>6 JS Libraries for Building Visualized Charts &amp; Graphs</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="http://codecondo.com/6-js-libraries-building-visualized-charts-graphs/">http://codecondo.com/6-js-libraries-building-visualized-charts-graphs/</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>draw.io</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://github.com/jgraph/draw.io">https://github.com/jgraph/draw.io</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="v-references">
+<span id="references-ref"></span><h2>V. References<a class="headerlink" href="#v-references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sơn-san tips</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Hai Tran.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.7.13',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
