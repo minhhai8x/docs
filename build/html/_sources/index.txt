@@ -8,10 +8,10 @@ Welcome to tips's documentation!
 
 Contents:
 
-    * This is the series for best practise
-
 .. toctree::
    :maxdepth: 2
+
+   contents/GIT-issues
 
 
 

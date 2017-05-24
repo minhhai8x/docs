@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; tips 2.7.13 documentation</title>
+  <title>GIT issues &mdash; tips 2.7.13 documentation</title>
   
 
   
@@ -24,16 +24,17 @@
 
   
   
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="tips 2.7.13 documentation" href="index.html"/> 
+    <link rel="top" title="tips 2.7.13 documentation" href="../index.html"/>
+        <link rel="prev" title="Welcome to tips’s documentation!" href="../index.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -48,7 +49,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> tips
+            <a href="../index.html" class="icon icon-home"> tips
           
 
           
@@ -65,7 +66,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -79,8 +80,8 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="contents/GIT-issues.html">GIT issues</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">GIT issues</a></li>
 </ul>
 
             
@@ -94,7 +95,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">tips</a>
+        <a href="../index.html">tips</a>
       </nav>
 
 
@@ -109,10 +110,14 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
+    <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Search</li>
+    <li>GIT issues</li>
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/contents/GIT-issues.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -121,23 +126,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="git-issues">
+<h1>GIT issues<a class="headerlink" href="#git-issues" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">Git auto-completion not working on Mac OSX</p>
+<blockquote>
+<div><ul class="simple">
+<li>Install bash-completion</li>
+</ul>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">brew install git bash-completion</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>You&#8217;ll need to add the following to your ~/.bash_profile to get homebrew&#8217;s bash-completion working:</li>
+</ul>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">if [ -f $(brew --prefix)/etc/bash_completion ]; then</span>
+<span class="x">    . $(brew --prefix)/etc/bash_completion</span>
+<span class="x">fi</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to tips’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -165,24 +188,23 @@
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
+            URL_ROOT:'../',
             VERSION:'2.7.13',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
   
   
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
   
@@ -192,14 +214,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
