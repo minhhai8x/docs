@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GIT issues &mdash; tips 2.7.13 documentation</title>
+  <title>Diagram &mdash; tips 2.7.13 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="tips 2.7.13 documentation" href="../index.html"/>
-        <link rel="next" title="Diagram" href="Diagram.html"/>
-        <link rel="prev" title="Welcome to tips’s documentation!" href="../index.html"/> 
+        <link rel="next" title="Convention" href="Convention.html"/>
+        <link rel="prev" title="GIT issues" href="GIT-issues.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,8 +82,8 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">GIT issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Diagram.html">Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT-issues.html">GIT issues</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Convention.html">Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Testing.html">Testing</a></li>
 </ul>
@@ -116,11 +116,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>GIT issues</li>
+    <li>Diagram</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/contents/GIT-issues.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/contents/Diagram.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -130,25 +130,73 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="git-issues">
-<h1>GIT issues<a class="headerlink" href="#git-issues" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="diagram">
+<h1>Diagram<a class="headerlink" href="#diagram" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic">
-<li><p class="first">Git auto-completion not working on Mac OSX</p>
+<li><p class="first">Install (npm required, please google search about install npm if your mac has no npm)</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">npm install -g mermaid</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Generate PNG image file from your sequenceDiagram text</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">mermaid -p sequenceDiagram.txt</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Convention for diagrams</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><a class="reference external" href="http://knsv.github.io/mermaid/sequenceDiagram.html#alt">http://knsv.github.io/mermaid/sequenceDiagram.html#alt</a></p>
+</li>
+<li><p class="first">Mấy cái đánh số ①、②、③</p>
 <blockquote>
 <div><ul class="simple">
-<li>Install bash-completion</li>
+<li>① xxxx</li>
+<li>② xxxx</li>
+<li>③ xxxx</li>
+<li>④ xxxx</li>
+<li>⑤ xxxx</li>
+<li>⑥ xxxx</li>
+<li>⑦ xxxx</li>
+<li>⑧ xxxx</li>
+<li>⑨ xxxx</li>
+<li>⑩ xxxx</li>
+<li>⑪ xxxx</li>
 </ul>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">brew install git bash-completion</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li>You&#8217;ll need to add the following to your ~/.bash_profile to get homebrew&#8217;s bash-completion working:</li>
+</div></blockquote>
+</li>
+<li><p class="first">Số ý nghĩa lặp lại số trên</p>
+<blockquote>
+<div><ul class="simple">
+<li>❶</li>
+<li>❷</li>
+<li>❸</li>
+<li>❹</li>
+<li>❺</li>
+<li>❻</li>
+<li>❼</li>
+<li>❽</li>
+<li>❾</li>
 </ul>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">if [ -f $(brew --prefix)/etc/bash_completion ]; then</span>
-<span class="x">    . $(brew --prefix)/etc/bash_completion</span>
-<span class="x">fi</span>
-</pre></div>
-</div>
+</div></blockquote>
+</li>
+<li><p class="first">Thông thường edit thì có dấu &#8220;*&#8221; , &#8220;+&#8221; là add mới và &#8220;-&#8221; là delete</p>
+<blockquote>
+<div><ul class="simple">
+<li>①* editFunction</li>
+<li>②+ newFunction</li>
+<li>③- deletedFunction</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Flow:</p>
+</li>
+</ul>
+<img alt="../_images/sequence-convention.gif" src="../_images/sequence-convention.gif" />
 </div></blockquote>
 </li>
 </ol>
@@ -161,10 +209,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Diagram.html" class="btn btn-neutral float-right" title="Diagram" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Convention.html" class="btn btn-neutral float-right" title="Convention" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Welcome to tips’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GIT-issues.html" class="btn btn-neutral" title="GIT issues" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GIT issues &mdash; tips 2.7.13 documentation</title>
+  <title>Testing &mdash; tips 2.7.13 documentation</title>
   
 
   
@@ -31,8 +31,7 @@
 
   
     <link rel="top" title="tips 2.7.13 documentation" href="../index.html"/>
-        <link rel="next" title="Diagram" href="Diagram.html"/>
-        <link rel="prev" title="Welcome to tips’s documentation!" href="../index.html"/> 
+        <link rel="prev" title="Convention" href="Convention.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,10 +81,14 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">GIT issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GIT-issues.html">GIT issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Diagram.html">Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Convention.html">Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Testing.html">Testing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#acceptance-test-for-running-one-function">1. Acceptance Test for running one function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acceptance-test-for-multiple-groups">2. Acceptance Test for multiple groups</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -116,11 +119,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>GIT issues</li>
+    <li>Testing</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/contents/GIT-issues.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/contents/Testing.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -130,28 +133,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="git-issues">
-<h1>GIT issues<a class="headerlink" href="#git-issues" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic">
-<li><p class="first">Git auto-completion not working on Mac OSX</p>
+  <div class="section" id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="acceptance-test-for-running-one-function">
+<h2>1. Acceptance Test for running one function<a class="headerlink" href="#acceptance-test-for-running-one-function" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">php vendor/codeception/codeception/codecept run acceptance TrackDetail/User/TrackDetailCest::testCase001 --env local-phantomjs --debug</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="acceptance-test-for-multiple-groups">
+<h2>2. Acceptance Test for multiple groups<a class="headerlink" href="#acceptance-test-for-multiple-groups" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li>Install bash-completion</li>
-</ul>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">brew install git bash-completion</span>
+<div><ul>
+<li><p class="first">Multi group</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">... -g admin -g editor</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li>You&#8217;ll need to add the following to your ~/.bash_profile to get homebrew&#8217;s bash-completion working:</li>
+<li>Ref: <a class="reference external" href="http://codeception.com/docs/07-AdvancedUsage">http://codeception.com/docs/07-AdvancedUsage</a></li>
 </ul>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">if [ -f $(brew --prefix)/etc/bash_completion ]; then</span>
-<span class="x">    . $(brew --prefix)/etc/bash_completion</span>
-<span class="x">fi</span>
+</li>
+<li><p class="first">For one group</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">php vendor/codeception/codeception/codecept run acceptance TrackSearch --env aws-vn --group delivery-setting --debug</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
-</ol>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -161,10 +170,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Diagram.html" class="btn btn-neutral float-right" title="Diagram" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../index.html" class="btn btn-neutral" title="Welcome to tips’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Convention.html" class="btn btn-neutral" title="Convention" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

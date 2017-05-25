@@ -12,6 +12,10 @@ Contents:
    :maxdepth: 2
 
    contents/GIT-issues
+   contents/Diagram
+   contents/Convention
+   contents/Testing
+   contents/IDE
 
 
 
